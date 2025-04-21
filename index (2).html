@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genmitra | Book Appointment</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/forms@0.4.0/dist/forms.min.js"></script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0f7fa, #fff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .form-container {
+      animation: slideIn 1s ease forwards;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    @keyframes slideIn {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full form-container">
+    <h2 class="text-3xl font-bold mb-4 text-center text-blue-600">Book Your Appointment</h2>
+    <p class="text-gray-600 text-center mb-6">For help with EPF, Aadhaar, PAN, or any public service.</p>
+    
+    <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" class="space-y-4">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Full Name" required class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-blue-500">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-blue-500">
+      <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-blue-500">
+      <select name="service" required class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-blue-500">
+        <option value="">Select a Service</option>
+        <option>EPF Withdrawal</option>
+        <option>Aadhaar Update</option>
+        <option>PAN Correction</option>
+        <option>Income Tax Help</option>
+        <option>Others</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Additional Info (optional)" class="w-full p-3 rounded border border-gray-300 focus:ring-2 focus:ring-blue-500"></textarea>
+      <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 transition-all">Book Appointment</button>
+    </form>
+
+    <p class="text-xs text-center text-gray-400 mt-6">Powered by Genmitra 🇮🇳</p>
+  </div>
+</body>
+</html>
